@@ -103,8 +103,8 @@ async function v0(){
 	//
 	
 	client_mqtt.on('message', function (topic, message) {
-	    console.log("\nMQTT msg on topic : ", topic.toString());
-	    console.log("Msg payload : ", message.toString());
+	   /* console.log("\nMQTT msg on topic : ", topic.toString());
+	    console.log("Msg payload : ", message.toString());*/
 		try{
 	    // Parsing du message suppos� recu au format JSON
 		
@@ -142,8 +142,8 @@ async function v0(){
 	    // en utilisant le nom du topic comme key de collection
 	    dbo.collection(key).insertOne(new_entry, function(err, res) {
 		if (err) throw err;
-		("\nItem : ", new_entry, 
-		"\ninserted in db in collection :", key);
+		/*console.log("\nItem : ", new_entry, 
+		"\ninserted in db in collection :", key);*/
 	    });
 	}catch(error){
 	console.log("Format JSON inconnu")
@@ -201,6 +201,8 @@ app.use(function(request, response, next) { //Pour eviter les problemes de CORS/
     
 // Route / => Le node renvoie la page HTML affichant les charts
 app.get('/', function (req, res) {
+	console.log("res "+res)
+	console.log(path.join(__dirname + '/ui_lucioles.html'))
     res.sendFile(path.join(__dirname + '/ui_lucioles.html'));
 });
 
