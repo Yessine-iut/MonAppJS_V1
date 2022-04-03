@@ -244,8 +244,8 @@ app.get('/esp/:what', function (req, res) {
 //================================================================
 //==== Demarrage du serveur Web  =======================
 //================================================================
-// L'application est accessible sur le port 3000
+// L'application est accessible sur le port 8080
 
-app.listen(3000, () => {
-    console.log('Server listening on port 3000');
+app.listen(8080, () => {
+    console.log('Server listening on port 8080');
 });
