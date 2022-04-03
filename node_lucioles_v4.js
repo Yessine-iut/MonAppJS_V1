@@ -57,7 +57,7 @@ async function v0(){
 	dbo.listCollections({name: "temp"})
 	    .next(function(err, collinfo) {
 		if (collinfo) { // The collection exists
-		    //console.log('Collection temp already exists');
+		    console.log('Collection temp already exists');
 		    dbo.collection("temp").drop() 
 		}
 	    });
@@ -65,7 +65,7 @@ async function v0(){
 	dbo.listCollections({name: "light"})
 	    .next(function(err, collinfo) {
 		if (collinfo) { // The collection exists
-		    //console.log('Collection temp already exists');
+		    console.log('Collection temp already exists');
 		    dbo.collection("light").drop() 
 		}
 	    });
@@ -103,8 +103,8 @@ async function v0(){
 	//
 	
 	client_mqtt.on('message', function (topic, message) {
-	   /* console.log("\nMQTT msg on topic : ", topic.toString());
-	    console.log("Msg payload : ", message.toString());*/
+	    console.log("\nMQTT msg on topic : ", topic.toString());
+	    console.log("Msg payload : ", message.toString());
 		try{
 	    // Parsing du message suppos� recu au format JSON
 		
@@ -142,8 +142,8 @@ async function v0(){
 	    // en utilisant le nom du topic comme key de collection
 	    dbo.collection(key).insertOne(new_entry, function(err, res) {
 		if (err) throw err;
-		/*console.log("\nItem : ", new_entry, 
-		"\ninserted in db in collection :", key);*/
+		("\nItem : ", new_entry, 
+		"\ninserted in db in collection :", key);
 	    });
 	}catch(error){
 	console.log("Format JSON inconnu")

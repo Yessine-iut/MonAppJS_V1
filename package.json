@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "node_lucioles_v4.js",
   "scripts": {
-    "start": "node node_lucionles_v4.js",
+    "start": "node node_lucioles_v4.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
