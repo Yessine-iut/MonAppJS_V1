@@ -102,6 +102,8 @@ function get_samples(path_on_node, serie, wh){
     // wh => which esp do we want to query data
     
     node_url = 'https://iotby801687m1.herokuapp.com'
+   // node_url = 'https://localhost:3000'
+
     //node_url = 'http://134.59.131.45:3000'
     //node_url = 'http://192.168.1.101:3000'
 
